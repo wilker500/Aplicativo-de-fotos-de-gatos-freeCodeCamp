@@ -1,0 +1,130 @@
+<!DOCTYPE html> <!-- diz aos navegadores que o documento é um documento HTML5, que é a versão mais recente do HTML-->
+<html lang="en"> <!-- Especificando a linguagem da página que no caso é Inglês que é o EN-->
+  <head> 
+    <meta charset="utf-8"> <!-- diz ao navegador como codificar os caracteres para a página.-->
+    <title> CatPhotoApp</title>  <!-- Elemento que mostra na barra de título ou na aba da página-->
+  </head>
+
+  <body>
+   <main> <!-- Main Conteúdo principal do corpo do HTML-->
+<h1>CatPhotoApp</h1> <!-- H1 Título Principal de Página -->
+
+      <section>
+      <h2>Cat Photos</h2>  <!-- H2 Subtítulo Principal de Página -->
+      <!-- TODO: Add link to cat photos -->
+
+      <!-- <p>See more cat photos in our gallery.</p> Código comentado pois o âncora abaixo executa mesma função  -->
+
+      <p>See more <a href="https://freecatphotoapp.com" target="_blank">cat photos</a> in our gallery.</p>   
+      <!-- <No caso acima colocamos o elemento âncora na palavra clicável cat photos quebrando misturando parte escrita com parte clicável-->
+      <!-- taget="_blank" abrir novo site em nova janela -->
+
+      <!-- <Funcionamento de elemento âncora explicado -->
+      <!-- <a href="https://freecatphotoapp.com"> link to cat pictures </a> Código Comentado -->
+      <!-- <a elemento âncora faz com que ocorra ligação com outra página -->
+      <!-- link to cat pictures palavra clicável para entrarmos no elemento âncora -->
+
+      <!-- <Imagem Clicável imagem permite redirecionar para site exemplo abaixo -->
+      <a  href="https://freecatphotoapp.com"> <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a> 
+
+
+
+      <!-- <Funcionamento de elemento img,src e alt explicado -->
+      <!-- <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back">   Código comentado -->
+      <!-- <img elemento nulo pois não precisa de tag de fechamento> -->
+      <!-- src = indica onde está localizado a nossa imagem ou seja a URL -->
+      <!-- alt usado por leitor de tela para melhorar a acessibilidade usado se imagem não pode ser carregada -->
+
+
+    </section>  <!-- Fecha Section1 -->
+
+     <section>  <!-- Seção 2-->
+      <h2>Cat Lists</h2>
+      <h3>Things cats love:</h3>
+      <ul> 
+        <li>cat nip</li>
+        <li>laser pointers</li>
+        <li>lasagna</li>
+      </ul>
+      <!-- ul usado para criar lista não ordenada -->
+      <!-- li usado para criar lista ordenada ou não ordenada -->
+
+      <figure> <!-- figure permite associar legenda com imagem -->
+        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">  <!--imagem de pizza -->
+        <figcaption>Cats <em>love</em> lasagna.</figcaption> <!--figcaption adiciona descrição à imagem em elmento figure -->
+
+        <!--<em>love</em> permite dar ênfase em itálico a palavra love -->
+      </figure>
+
+      <h3>Top 3 things cats hate:</h3>
+      <ol>  <!-- ol usado para criar lista ordenada com números -->
+        <li> flea treatment</li> 
+        <li> thunder</li> 
+        <li> other cats</li> 
+       </ol>
+
+       <figure> 
+        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt ="Five cats looking around a field."> <!--imagem de gatos -->
+        <figcaption> Cats <strong>hate</strong> other cats. </figcaption> <!--Strong usado para negritar a palavra hate neste caso -->
+       </figure>
+
+       <section>
+        <h2>Cat Form</h2>
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+          <label> <!--label1 associa texto a elemento input -->
+          <fieldset>  <!-- O elemento fieldset é usado para agrupar entradas (inputs) e rótulos (labels) relacionados em um formulário da web. Os elementos fieldset são elementos de nível de bloco, o que significa que eles aparecem em uma nova linha.-->
+            <legend>Is your cat an indoor or outdoor cat?</legend>  <!--O elemento legend atua como uma legenda para o conteúdo do elemento fieldset. Ele dá aos usuários um contexto sobre o que devem inserir nessa parte do formulário. -->
+            <input id="indoor" checked type="radio" name="indoor-outdoor" value = "indoor" > Indoor <!--este input permite usuário escolher indoor// ID identifica elemento específico em HTML-->
+          </label> <!--label1 fecha-->
+
+          <label>  <!--label2 abre-->
+            <input id="outdoor" type="radio" name="indoor-outdoor" value = "outdoor" > Outdoor
+          </label> <!--label2 fecha-->
+        </fieldset> <!--fieldset fecha-->
+
+        <fieldset> 
+        <legend> What's your cat's personality? </legend>
+        <!-- <input id = "loving" type ="checkbox"> Loving --> 
+        <!--Elemento Input com atributo checkbox cria caixa de seleção a parte da frente >loving permite ter a opção de marcar loving como caixa de seleção -->
+        
+        <!--2ª forma de fazer como mostrado abaixo como o código da linha <input id = "loving" type ="checkbox"> Loving-->
+        <input id="loving" checked type="checkbox" name="personality" value="loving">  <!--Caixa de seleção Personalidade amável-->
+        <label for="loving">Loving</label>
+
+        <input id="lazy" type="checkbox" name="personality" value="lazy"> <!--Caixa de seleção Personalidade preguiçoso-->
+        <label for="lazy">lazy</label>
+
+        <input id="energetic" type="checkbox" name="personality" value="energetic">  <!--Caixa de seleção Personalidade energético-->
+        <label for="energetic">energetic</label>
+
+        <footer>  <!--Rodapé de Página-->
+          <p> No Copyright - <a target='_blank' href="https://www.freecodecamp.org"> freeCodeCamp.org </a> </p>
+            
+            
+            
+
+        </footer>
+        
+      
+      </fieldset>
+
+          <input type="text" name="catphotourl" placeholder="cat photo URL" required >
+            <!--form usado para obter formulários--> 
+            <!--input elemento nulo não precisa de tag de fechamento-->   
+            <!--type="text" para coletar texto do usuário
+            // placeholder dá uma dica ao usuário do que ele deve escrever
+            //required para obrigar a usuário enviar dados-->
+            <button type="Submit">Submit</button>  <!--button cria botão clicável/ criamos atributo type para identificar que ele é botão de enviar coisas-->
+
+        </form>
+
+       </section>
+
+       <!--Input coleta dados por meio de formulário-->
+
+      
+
+     </section> <!-- Fecha Section2 -->
+   </main>  <!-- Fecha Main --> 
+  </body>  <!-- Fecha Body --> 
+</html> <!-- Fecha HTML -->   
